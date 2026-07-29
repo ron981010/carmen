@@ -1,9 +1,9 @@
 // Fecha del evento (YYYY-MM-DDTHH:MM:SS)
-const eventDate = new Date("2025-06-31T15:00:00").getTime();
+const eventDate = new Date("2026-12-31T23:59:59-04:00").getTime();
 
 function updateCountdown() {
   const now = new Date().getTime();
-  const distance = eventDate - now;
+  const distance = Math.max(0, eventDate - now);
 
   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
   const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
